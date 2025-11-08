@@ -1,3 +1,4 @@
 agent-framework
 agent-framework-devui
 python-dotenv
+azure-monitor-opentelemetry-exporter>=1.0.0b41

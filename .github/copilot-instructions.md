@@ -12,6 +12,11 @@ YOU CAN ADD DEPENDENCIES TO requirements.txt IF NEEDED, BUT DO NOT REMOVE ANY EX
 
 If you need to add environment variables, check first if they exist in the .env file and add them to the .env file if needed. DO NOT REMOVE ANY EXISTING VARIABLES.
 
+# Telemetry
+
+Make sure that telemetry is enabled and sending data to Application Insights. If telemetry is not enabled, enable it and use the values in the .env file as reference. 
+Instructions on how to enable telemetry for Microsoft Agent Framework are here: https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-observability?pivots=programming-language-python
+
 # Agent Types details
 
 - Azure AI Foundry Agent: https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-types/azure-ai-foundry-agent?pivots=programming-language-python

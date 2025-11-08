@@ -13,9 +13,13 @@ from agent_framework.azure import AzureAIAgentClient
 from azure.identity.aio import AzureCliCredential
 from pydantic import Field
 from dotenv import load_dotenv
+from agent_framework.observability import setup_observability
 
 # Load environment variables
 load_dotenv()
+
+# Setup observability/telemetry
+setup_observability()
 
 
 # Create the agent instance for DevUI discovery
