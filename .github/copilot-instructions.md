@@ -17,6 +17,13 @@ If you need to add environment variables, check first if they exist in the .env 
 Make sure that telemetry is enabled and sending data to Application Insights. If telemetry is not enabled, enable it and use the values in the .env file as reference. 
 Instructions on how to enable telemetry for Microsoft Agent Framework are here: https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-observability?pivots=programming-language-python
 
+# Directory Structure
+
+When creating an agent, make sure that it is compatible with DevUI by following the instructions here: https://learn.microsoft.com/en-us/agent-framework/devui/devui-discovery?pivots=programming-language-python. You need to create a folder for the agent inside the agents/ folder, and create an __init__.py file that exports the agent for DevUI discovery.
+
 # Agent Types details
 
-- Azure AI Foundry Agent: https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-types/azure-ai-foundry-agent?pivots=programming-language-python
+## Azure AI Foundry / Azure AI Agent Service agents
+
+- The docs are at https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-types/azure-ai-foundry-agent?pivots=programming-language-python 
+- Ask the user for the agent Id in Foundry and generate code that uses the existing agent or creates a new one if it does not exist. If creating a new one, it should be persistent as described in https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-types/azure-ai-foundry-agent?pivots=programming-language-python#creating-and-managing-persistent-agents
