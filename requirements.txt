@@ -1,5 +1,9 @@
 agent-framework
-agent-framework-azure-ai
 agent-framework-devui
-python-dotenv
 azure-monitor-opentelemetry-exporter
+azure-identity
+python-dotenv
+httpx
+pytest
+ruff
+mypy
