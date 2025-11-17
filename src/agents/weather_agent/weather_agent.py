@@ -76,8 +76,12 @@ agent = client.create_agent(
 
 async def main():
     """Main CLI interaction loop."""
-    # Setup observability
-    setup_observability()
+    # Setup observability (optional, will fail gracefully if not configured)
+    try:
+        setup_observability()
+    except Exception as e:
+        print(f"Warning: Could not setup observability: {e}")
+        print("Continuing without telemetry...\n")
     
     print("Weather Agent - Type 'exit' or 'quit' to end the conversation.")
     print("Ask about weather in any of these cities:", ", ".join(WEATHER_DATA.keys()))

@@ -39,8 +39,10 @@ The agent provides weather data for the following 10 cities:
 
 - Python 3.11 or higher
 - Azure subscription with Azure AI Foundry project
-- Azure CLI authenticated or appropriate credentials configured
-- Required environment variables set
+- Azure CLI authenticated (`az login`) or appropriate credentials configured (e.g., DefaultAzureCredential)
+- Required environment variables set (see below)
+
+**Note**: The agent requires valid Azure credentials to run. Without proper authentication, the agent will fail when attempting to connect to Azure AI services.
 
 ## Environment Variables
 
