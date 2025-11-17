@@ -158,7 +158,7 @@ If persistent:
 
 ### 2. DO NOT wrap `AzureAIAgentClient` in a `ChatClient`
 
-Use exactly the initialization patterns provided in the Microsoft Agent Framework documentation.
+Use exactly the initialization patterns provided in the Microsoft Agent Framework documentation via the links above.
 
 ### 3. Minimal functionality
 - Use only API calls that are shown in the official docs
