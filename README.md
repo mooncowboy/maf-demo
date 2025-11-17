@@ -12,6 +12,27 @@ The goal is to:
 - Provide a starting point for developers learning the Microsoft Agent Framework
 - Foster a community-driven collection of reusable prompts and agent templates
 
+## Roadmap
+
+### Agent Types
+- [x] Azure AI Agent (Azure AI Foundry Agent Service)
+- [ ] Azure AI Foundry Models ChatCompletion
+- [ ] Azure AI Foundry Models Responses
+- [ ] Azure OpenAI ChatCompletion
+- [ ] Azure OpenAI Responses
+- [ ] OpenAI ChatCompletion
+- [ ] OpenAI Responses
+- [ ] OpenAI Assistants
+- [ ] Custom Agents (BaseAgent)
+- [ ] A2A Proxy Agents
+
+### Features
+- [x] Telemetry & Observability (Application Insights)
+- [ ] Tools & Function Calling
+- [ ] MCP Servers Integration
+- [ ] Workflows & Multi-Agent Orchestration
+- [ ] Human-in-the-Loop
+
 ## Available Resources
 
 ### 📝 Prompts
