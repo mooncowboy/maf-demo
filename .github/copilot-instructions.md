@@ -15,6 +15,8 @@ Your primary responsibilities in this repository are:
 All generated code must follow the **official Microsoft Agent Framework
 documentation**, which you MUST treat as authoritative.
 
+**IMPORTANT**: If there is a suitable prompt file in `.github/prompts/` that matches the task, use it as the primary source for generating code and instruct the user that using prompt files should be the preferred way to get consistent results.
+
 ------------------------------------------------------------------------
 
 ## 0. Authoritative Documentation (MUST FOLLOW)
@@ -108,7 +110,9 @@ Rules:
 -   Deployment-related files must go under `.github/workflows/` or
     `infra/` folders if they exist.
 
-**Make sure agents and workflows are compatible with DevUI** by following the above instructions. Also, you'll need an __init__.py file in each agent and workflow folder to enable DevUI to discover them properly. Check there for official docs: https://github.com/microsoft/agent-framework/tree/main/python/packages/devui 
+**Make sure agents and workflows are compatible with DevUI** by following the above instructions. Also, you'll need an __init__.py file in each agent and workflow folder to enable DevUI to discover them properly. The agent **must** be exported as `agent`. Check there for official docs: https://github.com/microsoft/agent-framework/tree/main/python/packages/devui 
+
+**Do not modify** root `README.md` or other top-level documentation unless explicitly asked.
 
 ------------------------------------------------------------------------
 
@@ -135,6 +139,9 @@ When generating or updating an agent:
 
 6.  **Logging & error handling**\
     Use Python `logging` and raise clear exceptions in tools.
+
+7. Observability:
+    When creating an agent, ensure it sends telemetry to Application Insights, unless the user specifies otherwise. Follow the official MAF documentation for integrating telemetry available here: https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-observability?pivots=programming-language-python#enable-observability-1
 
 ------------------------------------------------------------------------
 
