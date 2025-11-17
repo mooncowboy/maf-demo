@@ -46,8 +46,12 @@ def get_weather(city: str) -> str:
 
 def create_agent():
     """Create and return a weather agent instance."""
-    # Set up observability
-    setup_observability()
+    # Set up observability (skip if connection string is not properly configured)
+    try:
+        setup_observability()
+    except (ValueError, Exception) as e:
+        print(f"Warning: Could not set up observability: {e}")
+        print("Continuing without telemetry...")
     
     # Get configuration from environment
     project_endpoint = os.getenv("AZURE_AI_PROJECT_ENDPOINT")
