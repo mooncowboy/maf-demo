@@ -131,7 +131,7 @@ devui ./src/agents/<created_agent_folder> --port 8080
 ```
 ---
 
-**IMPORTANT:** You will need to use the Playwright MCP Server to test the agent in DevUI. If Playwright is not running, ask the user for instructions on how to proceed. Open DevUI in Playwright and check that there are no errors when loading the agent. Test a minimal interaction to ensure it works.
+**IMPORTANT:** You will try to use the Playwright MCP Server to test the agent in DevUI. **If Playwright fails to run, ignore this step.** If Playwright runs successfully, open DevUI in Playwright and check that there are no errors when loading the agent. Test a minimal interaction to ensure it works, take a screenshot, and include it in the generated README file for the newly created agent.
 
 # Azure AI Agent / Azure AI Agent Service Specific Rules
 
