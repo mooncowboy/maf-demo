@@ -40,7 +40,7 @@ async def delete_all_agents():
             # List all agents
             print("Fetching list of agents...")
             agents_list = []
-            async for agent in project_client.agents.list_agents():
+            async for agent in project_client.agents.list():
                 agents_list.append(agent)
             
             if not agents_list:

@@ -122,7 +122,7 @@ After implementation, **you will run the agent (ensure you're running in the exi
 
 ## Step 5 - Test the Agent in DevUI
 
-After testing the agent in the CLI, you will also verify that DevUI can discover and run the agent properly. If any issues arise, fix them. Your job **is not complete** until the agent runs successfully in DevUI. If you cannot fix the errors, report them back to the user for further instructions.
+After testing the agent in the CLI, you will also verify that DevUI can discover and run the agent properly. **TAKE A SCREENSHOT AND PUT IT IN THE CHAT SESSION". If any issues arise, fix them. Your job **is not complete** until the agent runs successfully in DevUI. If you cannot fix the errors, report them back to the user for further instructions.
 
 To run DevUI, use the following command from the repo root:
 
@@ -130,6 +130,8 @@ To run DevUI, use the following command from the repo root:
 devui ./src/agents/<created_agent_folder> --port 8080
 ```
 ---
+
+**IMPORTANT:** You will need to use the Playwright MCP Server to test the agent in DevUI. If Playwright is not running, ask the user for instructions on how to proceed. Open DevUI in Playwright and check that there are no errors when loading the agent. Test a minimal interaction to ensure it works.
 
 # Azure AI Agent / Azure AI Agent Service Specific Rules
 
