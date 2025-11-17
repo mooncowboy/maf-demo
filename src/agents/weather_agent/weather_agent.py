@@ -9,8 +9,9 @@ import os
 from typing import Annotated
 
 from dotenv import load_dotenv
-from azure.identity import DefaultAzureCredential
-from agent_framework import AzureAIAgentClient, setup_observability
+from azure.identity.aio import DefaultAzureCredential
+from agent_framework.azure import AzureAIAgentClient
+from agent_framework.observability import setup_observability
 
 # Load environment variables
 load_dotenv()
@@ -58,11 +59,16 @@ def list_cities() -> str:
     return "Available cities: " + ", ".join(WEATHER_DATA.keys())
 
 
-# Initialize the agent
-agent = AzureAIAgentClient(
-    credential=DefaultAzureCredential(),
-    endpoint=os.getenv("AZURE_AI_PROJECT_ENDPOINT"),
-    model=os.getenv("AZURE_AI_MODEL_DEPLOYMENT_NAME"),
+# Initialize the Azure AI client
+client = AzureAIAgentClient(
+    async_credential=DefaultAzureCredential(),
+    project_endpoint=os.getenv("AZURE_AI_PROJECT_ENDPOINT"),
+    model_deployment_name=os.getenv("AZURE_AI_MODEL_DEPLOYMENT_NAME")
+)
+
+# Create the agent (non-persistent)
+agent = client.create_agent(
+    name="WeatherAgent",
     instructions="You are a helpful weather assistant. You can provide weather information for specific cities. Use the get_weather tool to fetch weather data for a city, and the list_cities tool to show available cities.",
     tools=[get_weather, list_cities]
 )
