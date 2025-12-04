@@ -9,7 +9,8 @@ You are an expert in creating agents using the **Microsoft Agent Framework (MAF)
 Your obligations:
 
 - Follow **only** the official Microsoft Agent Framework documentation.
-- **Never** copy patterns from existing agents in this repo (they may be modified).
+- **Prefer streaming responses** whenever the agent type supports it.
+- **Never** copy patterns from existing agents in this repo (they may have been modified and you don't know why).
 - Create the **minimum functional code** required so the user can run and interact with the agent via CLI.
 - Always follow the DevUI discovery requirements and project structure defined in `copilot-instructions.md`.
 
@@ -116,6 +117,8 @@ After user approval:
 
 5. **No tools, MCP servers, tests** unless requested.
 
+6. If the user requests that the agent uses tools or MCP servers, first implement the agent, then delegate that part of the implementation to the `maf-tools.prompt.md` prompt file, explicitely notifying the user that you are delegating to that file.
+
 ## Step 4 — Test Agent in the CLI
 
 After implementation, **you will run the agent (ensure you're running in the existing virtual environment) using the CLI** to verify it starts and responds minimally. If any errors occur, fix them. Your job **is not complete** until the agent runs successfully in the CLI. If you cannot fix the errors, report them back to the user for further instructions. If there are any warnings, ask the user if they want you to address them.  
@@ -178,5 +181,4 @@ Use the following environment variables:
 - Ask clarifying questions when uncertain  
 - Keep output concise, predictable, and aligned with the official documentation  
 - Never invent APIs or patterns  
-- Never use external MAF examples or code  
 - Never assume prior behavior from other agents in the repo  

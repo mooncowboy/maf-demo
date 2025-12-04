@@ -2,6 +2,8 @@
 
 This prompt helps you add tools and Model Context Protocol (MCP) servers to Microsoft Agent Framework agents in Python.
 
+**IMPORTANT**: if user asks you to create an agent, first ensure the agent is created by calling the `maf-create-agent.prompt.md` prompt file. Only continue with adding the specified tools after that prompt file completes successfully.
+
 ## Overview
 
 The Microsoft Agent Framework supports multiple types of tools to extend agent capabilities:

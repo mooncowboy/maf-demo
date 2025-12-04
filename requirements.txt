@@ -1,5 +1,7 @@
-agent-framework
+agent-framework>=1.0.0b251120
 agent-framework-devui
+azure-ai-projects>=2.0.0b2
+agent-framework-azure-ai>=1.0.0b251120
 azure-monitor-opentelemetry-exporter
 azure-identity
 python-dotenv
