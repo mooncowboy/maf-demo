@@ -3,7 +3,7 @@
 import os
 from dotenv import load_dotenv
 from azure.identity import DefaultAzureCredential
-from agent_framework import AzureAIAgentClient
+from agent_framework_azure_ai import AzureAIAgentClient
 from agent_framework.observability import setup_observability
 
 # Load environment variables
