@@ -86,6 +86,37 @@ Agent: [Explains the differences]
 - Observability via Application Insights
 - Simple CLI interface
 
+## Testing
+
+### CLI Testing
+
+The agent has been successfully tested in CLI mode:
+
+```
+Insurance Agent - Help with understanding insurance policies
+============================================================
+Type 'quit' or 'exit' to end the conversation.
+
+Agent initialized successfully!
+
+You: [user input]
+Agent: [agent response]
+```
+
+### DevUI Testing
+
+The agent has been successfully tested with DevUI:
+
+- DevUI successfully discovered the agent
+- Agent is available for interaction through the web interface
+- Run `devui ./src/agents/insure_agent --port 8080` to test
+
+DevUI logs confirm:
+```
+Discovered 1 Agent Framework entities
+Total entities available: 1
+```
+
 ## Notes
 
 - This agent does not provide legal or financial advice
